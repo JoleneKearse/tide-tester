@@ -151,7 +151,12 @@ nav a {
     text-decoration: none;
     color: var(--clr-neutral-600);
 }
+nav a:hover,
+nav a:focus {
+    color: var(--clr-accent-900);
+}
 .currency-title {
+    margin-bottom: var(--gap-small) !important;
     font-size: clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
     font-weight: 800;
     line-height: 1;
@@ -295,13 +300,16 @@ nav {
     gap: var(--gap-large);
     justify-content: flex-end;
     align-items: center;
-    width: 50em;
+    width: 80vw;
+    width: calc(var(--vw, 1vw) * 80);
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
     gap: var(--gap-large);
+    width: 80vw;
+    width: calc(var(--vw, 1vw) * 80);
 }
 
 .nav-list {
@@ -420,7 +428,7 @@ footer {
     align-items: center;
     gap: var(--gap-large);
     height: 8.5vh;
-    padding: var(--gap-small);
+    padding: var(--gap-medium) 0;
     border-top: .1rem solid var(--clr-neutral-400);
     border-bottom: .1rem solid var(--clr-neutral-400);
 }
@@ -553,7 +561,7 @@ footer {
     width: 80vw;
     width: calc(var(--vw, 1vw) * 80);
     margin: 0 auto;
-    margin-top: var(--gap-large);
+    margin-top: var(--gap-large) !important;
     background-color: #D4BEF799;
     background-image: url("images\\deco.png");
     color: var(--clr-neutral-600);
@@ -681,6 +689,7 @@ button:focus {
 .btn-cta {
     background-color: var(--clr-accent-900);
     font-weight: 700;
+    /* line-height: 1rem !important; */
 }
 
 .btn-cta:hover,
@@ -749,9 +758,6 @@ button:focus {
     }
 } */
 @media (max-width: 420px) {
-    /* body {
-        width: 100vw;
-    } */
     .hero {
         width: 100vw;
         width: calc(var(--vw, 1vw) * 100);
@@ -763,8 +769,8 @@ button:focus {
         font-size: 2.75rem;
     }
     .btn-cta {
-        width: 35vw;
-        width: calc(var(--vw, 1vw) * 35);
+        width: 40vw;
+        width: calc(var(--vw, 1vw) * 40);
     }
     .tools-title h2 {
         line-height: 2.5rem;
@@ -855,10 +861,7 @@ button:focus {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 600px) and (orientation: landscape) {
-    /* body {
-        width: 100vw;
-    } */
+@media (min-width: 420px) and (max-width: 600px) and (orientation: landscape) {
     .metrics-block {
         display: flex;
         flex-wrap: wrap;
@@ -1051,6 +1054,10 @@ button:focus {
     .margin-right {
         margin-right: 1em;
     }
+    section .cta-form {
+        width: 90vw;
+        width: calc(var(--vw, 1vw) * 90) !important;
+    }
 }
 @media (max-width: 900px) and (orientation: landscape) {
     /* body {
@@ -1112,6 +1119,10 @@ button:focus {
     .metrics-block {
         flex: 1 1 80%;
         gap: .5em;
+    }
+    .cta-form {
+        width: 90vw;
+        width: calc(var(--vw, 1vw) * 90) !important;
     }
 }
 @media (max-width: 1100px) and (orientation: landscape) {
@@ -1320,5 +1331,13 @@ button:focus {
     .nav-list {
         display: flex;
         gap: var(--gap-large);
+    }
+    .crypto-box {
+        height: 10vh;
+    }
+    .crypto-icon {
+        width: 5vw;
+        height: 10vh;
+        margin: 1em 0;
     }
 }
