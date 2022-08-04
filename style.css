@@ -304,6 +304,10 @@ nav ul {
     gap: var(--gap-large);
 }
 
+.nav-list {
+    flex-wrap: wrap;
+}
+
 /* general */
 
 .container {
@@ -730,7 +734,7 @@ button:focus {
     background-color: var(--clr-accent-900);
 }
 /* ---------- MEDIA QUERIES ----------*/
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         background-color: #8f8a91;
     }
@@ -743,7 +747,7 @@ button:focus {
     .subscribe-title {
         color: var(--clr-accent-900);
     }
-}
+} */
 @media (max-width: 420px) {
     /* body {
         width: 100vw;
