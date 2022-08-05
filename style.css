@@ -1181,8 +1181,8 @@ button:focus {
 @media (min-width: 1300px) and (max-width: 1700px) and (orientation: portrait) {
     .nav-list {
         gap: var(--gap-medium) !important;
-        width: 60px !important;
-        width: calc(var(--vw, 1vw) * 60) !important;
+        width: 50px !important;
+        width: calc(var(--vw, 1vw) * 50) !important;
     }
     .cta-form {
         width: 80vw;
