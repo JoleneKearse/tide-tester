@@ -642,6 +642,24 @@ button:focus {
         color: var(--clr-accent-900);
     }
 } */
+@media (min-width: 1400px) {
+    nav {
+        justify-content: space-between;
+        gap: var(--gap-medium);
+    }
+    .nav-list {
+        display: flex;
+        gap: var(--gap-large);
+    }
+    .crypto-box {
+        height: 10vh;
+    }
+    .crypto-icon {
+        width: 5vw;
+        height: 10vh;
+        margin: 1em 0;
+    }
+}
 @media (max-width: 420px) and (orientation: portrait) {
     .hero {
         width: 100vw;
@@ -1160,7 +1178,14 @@ button:focus {
         width: calc(var(--vw, 1vw) * 60);
     }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1300px) and (max-width: 1700px) and (orientation: portrait) {
+    .nav-list {
+        gap: var(--gap-medium) !important;
+        width: 60px !important;
+        width: calc(var(--vw, 1vw) * 60) !important;
+    }
+}
+/* @media (min-width: 1400px) {
     nav {
         justify-content: space-between;
         gap: var(--gap-large);
@@ -1177,4 +1202,4 @@ button:focus {
         height: 10vh;
         margin: 1em 0;
     }
-}
+} */
