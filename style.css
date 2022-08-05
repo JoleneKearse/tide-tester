@@ -274,6 +274,9 @@ nav ul {
 .nav-list {
     flex-wrap: wrap;
 }
+.mobile-nav {
+    display: none;
+}
 /* general */
 .container {
     width: 80vw;
@@ -789,6 +792,97 @@ button:focus {
     }
     .btn-newsletter {
         margin-top: .25em;
+    }
+}
+@media (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+    body {
+        background-color: pink;
+    }
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+        order: 2;
+    }
+    .btn-nav {
+        order: 1;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .35s, visibility .35s, height .35s;
+        overflow: hidden;
+        background: var(--clr-neutral-600);
+        z-index: -1;
+    }
+    #hamburger-menu {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: .5em;
+        background: linear-gradient(
+            to bottom,
+            var(--clr-accent-900), var(--clr-accent-900) 20%,
+            white 20%, white 40%,
+            var(--clr-accent-900) 40%, var(--clr-accent-900) 60%,
+            white 60%, white 80%,
+            var(--clr-accent-900) 80%, var(--clr-accent-900) 100%
+        );
+    }
+    #hamburger-menu #sidebar-menu {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        padding: 0 1.5em;
+        background-color: var(--clr-accent-900);
+        transition: .3s;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-link {
+        color: var(--clr-neutral-200);
+    }
+    .nav-link:hover,
+    .nav-link:focus {
+        color: var(--clr-accent-300);
+    }
+    #hamburger-input {
+        visibility: hidden;
+    }
+    #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+        visibility: visible;
+        left: 0;
+    }
+    #hamburger-input:checked ~ .overlay {
+        visibility: visible;
+        opacity: .4;
+    }
+    #sidebar-menu {
+        transition: .3s;
+    }
+    #hamburger-input:unchecked + #hamburger-menu #sidebar-menu {
+        visibility: hidden;
+        left: 0;
+    }
+    #hamburger-input:unchecked ~ .overlay {
+        visibility: hidden;
+        opacity: .4;
     }
 }
 @media (min-width: 701px) and (max-width: 768px) {

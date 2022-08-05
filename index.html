@@ -15,7 +15,7 @@
             <header>
                 <div class="navigation">
                     <img src="images\logo.png" alt="" class="logo">
-                    <nav>
+                    <nav class="desktop-nav">
                         <ul class="nav-list">
                             <li><a href="#" class="nav-link">Payments</a></li>
                             <li><a href="#" class="nav-link">Developers</a></li>
@@ -23,6 +23,21 @@
                             <li><a href="#" class="nav-link">Pricing</a></li>
                         </ul>
                     </nav>
+                    <div class="mobile-nav">
+                        <input type="checkbox" id="hamburger-input" class="hamburger-shower">
+                        <label id="hamburger-menu" for="hamburger-input">
+                        <nav id="sidebar-menu">
+                            <ul class="nav-list">
+                                <li><a href="#" class="nav-link">Payments</a></li>
+                                <li><a href="#" class="nav-link">Developers</a></li>
+                                <li><a href="#" class="nav-link">Company</a></li>
+                                <li><a href="#" class="nav-link">Pricing</a></li>
+                            </ul>
+                        </nav>
+                    </label>
+
+                    <div class="overlay"></div>
+                    </div> 
                     <button class="btn-nav">Get Started</button>
                 </div>
             </header>
