@@ -819,7 +819,7 @@ button:focus {
         order: 1;
     }
     .overlay {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
