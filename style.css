@@ -821,11 +821,11 @@ button:focus {
         border-radius: .5em;
         background: linear-gradient(
             to bottom,
-            var(--clr-accent-900), var(--clr-accent-900) 20%,
+            var(--clr-neutral-600), var(--clr-neutral-600) 20%,
             white 20%, white 40%,
-            var(--clr-accent-900) 40%, var(--clr-accent-900) 60%,
+            var(--clr-neutral-600) 40%, var(--clr-neutral-600) 60%,
             white 60%, white 80%,
-            var(--clr-accent-900) 80%, var(--clr-accent-900) 100%
+            var(--clr-neutral-600) 80%, var(--clr-neutral-600) 100%
         );
     }
     #hamburger-menu #sidebar-menu {
@@ -872,6 +872,9 @@ button:focus {
         visibility: hidden;
         opacity: .4;
     }
+    .hero {
+        flex-direction: column;
+    }
 }
 @media (min-width: 701px) and (max-width: 768px) {
     .btn-box {
@@ -887,7 +890,7 @@ button:focus {
     }
 }
 @media (min-width: 769px) and (max-width: 800px) and (orientation: landscape) {
-    .navigation {
+    /* .navigation {
         gap: var(--gap-small);
         width: 98vw;
         width: calc(var(--vw, 1vw) * 98);
@@ -901,7 +904,7 @@ button:focus {
     }
     .btn-nav {
         margin-left: .25em;
-    }
+    } */
     .tools {
         justify-content: center;
         align-items: center;
@@ -929,7 +932,7 @@ button:focus {
         width: 100vw;
         width: calc(var(--vw, 1vw) * 100);
     }
-    .navigation {
+    /* .navigation {
         width: 95vw;
         width: calc(var(--vw, 1vw) * 95);
         margin: 0 auto;
@@ -939,7 +942,7 @@ button:focus {
     }
     .btn-nav {
         margin-left: var(--gap-small) !important;
-    }
+    } */
     .hero h1 {
         line-height: 1;
     }
@@ -958,7 +961,7 @@ button:focus {
     }
 }
 @media (min-width: 801px) and (max-width: 835px) and (orientation: portrait) {
-    .navigation {
+    /* .navigation {
         gap: var(--gap-small);
         width: 100vw;
         width: calc(var(--vw, 1vw) * 100);
@@ -969,7 +972,7 @@ button:focus {
     }
     .nav-list {
         gap: var(--gap-medium);
-    }
+    } */
     .metrics {
         flex-direction: column;
     }
@@ -989,17 +992,17 @@ button:focus {
     }
 }
 @media (min-width: 851px) and (max-width: 860px) and (orientation: landscape) {
-    .nav-list{
+    /* .nav-list{
         gap: 1.5em !important;
-    }
+    } */
 }
 @media (min-width: 861px) and (max-width: 885px) and (orientation: landscape) {
-    .navigation {
+    /* .navigation {
         gap: 1em;
     }
     .nav-list {
         gap: var(--gap-small);
-    }
+    } */
     .hero {
         gap: var(--gap-medium);
     }
@@ -1078,12 +1081,12 @@ button:focus {
     }
 }
 @media (min-width: 951px) and (max-width: 1100px) and (orientation: landscape) {
-    nav {
+    /* nav {
         gap: var(--gap-large);
     }
     .btn-nav {
         margin-left: var(--gap-small);
-    }
+    } */
     .hero h1 {
         line-height: 1;
     }
@@ -1100,9 +1103,9 @@ button:focus {
         width: 85vw;
         width: calc(var(--vw, 1vw) * 85);
     }
-    nav {
+    /* nav {
         gap: var(--gap-small) !important;
-    }
+    } */
     .hero {
         gap: .75em;
         width: 100vw;
@@ -1261,11 +1264,11 @@ button:focus {
     }
 }
 @media (min-width: 1300px) and (max-width: 1700px) and (orientation: portrait) {
-    .nav-list {
+    /* .nav-list {
         gap: var(--gap-medium) !important;
         width: 50px !important;
         width: calc(var(--vw, 1vw) * 50) !important;
-    }
+    } */
     .cta-form {
         width: 80vw;
         width: calc(var(--vw, 1vw) * 80);
