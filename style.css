@@ -120,7 +120,6 @@ h2,
 h3,
 h4,
 h5,
-.nav-link,
 .demo-vid a,
 .tool-heading,
 .section-title,
@@ -134,6 +133,7 @@ nav li {
 nav a {
     margin: 0;
     padding: 0;
+    font-weight: 600;
     text-decoration: none;
     color: var(--clr-neutral-600);
 }
@@ -225,11 +225,11 @@ footer a {
     border-radius: 2em;
 }
 .crypto-icon {
-    width: 6vw;
-    height: 5vh;
+    width: 5vw;
+    height: auto;
 }
-.rounded {
-    width: 3.5em;
+.crypto-icon .icon4w {
+    width: 4em;
 }
 .metrics-icon {
     width: 7em;
@@ -266,8 +266,8 @@ nav {
 }
 nav ul {
     display: flex;
-    justify-content: space-evenly;
-    gap: var(--gap-large);
+    justify-content: flex-end;
+    gap: var(--gap-small);
     width: 80vw;
     width: calc(var(--vw, 1vw) * 80);
 }
@@ -350,17 +350,13 @@ footer {
     margin-bottom: var(--gap-medium);
     text-align: center;
 }
-.currencies h3 {
-    max-width: 45ch;
-    margin: 0 auto;
-}
 .crypto-box {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: var(--gap-large);
-    height: 8.5vh;
-    padding: var(--gap-medium) 0;
+    flex-wrap: wrap;
+    gap: 5em !important;
+    padding: var(--gap-small) 0;
     border-top: .1rem solid var(--clr-neutral-400);
     border-bottom: .1rem solid var(--clr-neutral-400);
 }
@@ -543,7 +539,7 @@ footer {
 }
 .social-icon:hover,
 .social-icon:focus {
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 .app-store:hover,
 .app-store:focus {
@@ -561,8 +557,7 @@ button {
 }
 button:hover,
 button:focus {
-    transform: scale(1.05);
-    box-shadow: 1px 1px 6px 5px var(--clr-neutral-400);
+    transform: scale(1.01);
 }
 .btn-nav,
 .btn-metrics,
@@ -574,7 +569,6 @@ button:focus {
     font: inherit;
     font-weight: 600;
     color: var(--clr-accent-900);
-    /* position: relative; */
     transition: 0s .15s all ease-in;
     overflow: hidden;
 }
@@ -586,13 +580,11 @@ button:focus {
 .btn-cta {
     background-color: var(--clr-accent-900);
     font-weight: 700;
-    /* line-height: 1rem !important; */
 }
 .btn-cta:hover,
 .btn-cta:focus {
     background-color: var(--clr-accent-200);
     color: var(--clr-accent-900);
-    box-shadow: 1px 1px 6px 5px var(--clr-accent-800);
 }
 .btn-potential {
     display: inline-block;
@@ -621,7 +613,6 @@ button:focus {
 .btn-dev:hover,
 .btn-dev:focus {
     background-color: var(--clr-accent-800);
-    box-shadow: 1px 1px 6px 5px var(--clr-accent-300);
 }
 .btn-newsletter {
     background-color: var(--clr-accent-300);
@@ -654,9 +645,9 @@ button:focus {
         display: flex;
         gap: var(--gap-large);
     }
-    .crypto-box {
+    /* .crypto-box {
         height: 10vh;
-    }
+    } */
     .crypto-icon {
         width: 5vw;
         height: 10vh;
@@ -794,10 +785,7 @@ button:focus {
         margin-top: .25em;
     }
 }
-@media (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
-    body {
-        background-color: pink;
-    }
+@media (min-width: 320px) and (max-width: 800px) and (orientation: portrait) {
     .desktop-nav {
         display: none;
     }
@@ -876,11 +864,11 @@ button:focus {
     #sidebar-menu {
         transition: .3s;
     }
-    #hamburger-input:unchecked + #hamburger-menu #sidebar-menu {
+    #hamburger-input:not(:checked) + #hamburger-menu #sidebar-menu {
         visibility: hidden;
         left: 0;
     }
-    #hamburger-input:unchecked ~ .overlay {
+    #hamburger-input:not(:checked) ~ .overlay {
         visibility: hidden;
         opacity: .4;
     }
