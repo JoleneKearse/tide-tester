@@ -583,8 +583,8 @@ button:focus {
 }
 .btn-cta:hover,
 .btn-cta:focus {
-    background-color: var(--clr-accent-200);
-    color: var(--clr-accent-900);
+    background-color: var(--clr-accent-800);
+    color: var(--clr-neutral-200);
 }
 .btn-potential {
     display: inline-block;
