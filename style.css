@@ -868,18 +868,20 @@ button:focus {
         top: 0;
         right: 0;
         width: 70%;
-        height: 200px;
+        height: 300px;
         padding: 0 1.5em;
         background-color: var(--clr-accent-900);
         transition: .3s;
     }
     .nav-list {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     .nav-link {
         color: var(--clr-neutral-200);
+    }
+    nav li  {
+        margin-top: 1em;
     }
     .nav-link:hover,
     .nav-link:focus {
@@ -911,6 +913,7 @@ button:focus {
         visibility: hidden;
         opacity: .4;
     }
+    
     .hero {
         flex-direction: column;
     }
