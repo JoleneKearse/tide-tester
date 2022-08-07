@@ -905,7 +905,7 @@ button:focus {
     }
     #hamburger-input:not(:checked) + #hamburger-menu #sidebar-menu {
         visibility: hidden;
-        right: 0;
+        left: calc(100vw - 55px);
     }
     #hamburger-input:not(:checked) ~ .overlay {
         visibility: hidden;
